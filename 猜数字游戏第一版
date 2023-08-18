@@ -1,1 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    srand(time(NULL));
+
+    int random_number = rand() % 100 + 1;
+    int N;
+
+    scanf("%d", &N);
+
+    if (N > random_number) {
+        printf("你输入的数字大了，请重新输入：\n");
+    } else if (N < random_number) {
+        printf("你输入的数字小了，请重新输入：\n"); 
+    } else {
+        printf("恭喜你，猜对了"); 
+    }
+    printf("%d", random_number);
+
+    return 0;
+}
 
